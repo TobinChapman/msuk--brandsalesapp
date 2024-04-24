@@ -49,15 +49,13 @@ start_df = pd.concat([category_df[category_df['category'] == category_val],
 
 print(start_df)
 
-final_df = start_df.sum().reset_index
+final_df = pd.DataFrame(start_df.sum()).reset_index()
 
 print(final_df)
 
-test_df = purchase_df[purchase_df['category'] == purchase]
+create = final_df.iloc[1,1]
+convert = 100-create
 
-final_df = pd.concat([start_df, test_df])
+print(convert)
 
-if starting_balance == "FMCG Non Food":
-    print("FMCG Non Food")
-else:
-    print("Something else")
+print("your final split is ", create,"% create and ",convert,"% convert" )
