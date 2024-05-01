@@ -66,9 +66,9 @@ def main():
     create = final_df.iloc[1,1]
     convert = 100-create
 
-    result_area.write("<b1 style='text-align: center; font-size: {}px;'>Your final split is <b>{}% Brand</b> and <b>{}% Performance</b></b1>".format(26, create, convert), unsafe_allow_html=True)
+    result_area.write("<b1 style='text-align: center; font-size: {}px;'>Your final split is <i><b>{}% Brand</b></i> and <i><b>{}% Performance</b></i></b1>".format(26, create, convert), unsafe_allow_html=True)
 
-    st.write("This tool is designed to be a rough starting point for planning media. It is based off research from Les Binet and Peter Field. Please contact Marketing Science if you have any questions or would like more info on how we can help media planning.") 
+    st.write("This tool is designed to be a rough starting point for planning media. It is based off research from the IPA. Please contact Marketing Science if you have any questions or would like more info on how we can help media planning.") 
 
 if __name__ == '__main__':
     main()
