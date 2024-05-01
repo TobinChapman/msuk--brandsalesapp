@@ -1,11 +1,10 @@
 import streamlit as st
 import pandas as pd
-#from streamlit import html
 
 def main():
     st.set_page_config(page_title="BrandPerformanceCalc", page_icon=":crystal_ball:", initial_sidebar_state="expanded")
 
-    st.image('MS_Logo.png', width=100)
+    st.image('MS_Logo.png', width=80)
     st.title("Brand and Performance Calculator")
 
     result_area = st.empty()
@@ -67,7 +66,7 @@ def main():
     create = final_df.iloc[1,1]
     convert = 100-create
 
-    result_area.write("<b1 style='text-align: center; font-size: {}px;'>Your final split is <i><b>{}% Brand</b></i> and <i><b>{}% Performance</b></i></b1>".format(26, create, convert), unsafe_allow_html=True)
+    result_area.write("<b1 style='text-align: center; font-size: {}px;'>Your recommended split is <i><b>{}% Brand</b></i> and <i><b>{}% Performance</b></i></b1>".format(26, create, convert), unsafe_allow_html=True)
 
     st.write("This tool is designed to be a rough starting point for planning media. It is based off research from the IPA. Please contact Marketing Science if you have any questions or would like more info on how we can help media planning.") 
 
