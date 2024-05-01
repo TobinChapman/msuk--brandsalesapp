@@ -3,9 +3,7 @@ import pandas as pd
 #from streamlit import html
 
 def main():
-
-    # Set the theme of the app
-    #st.set_page_config(page_title="BrandPerformanceCalc", page_icon=":crystal_ball:", initial_sidebar_state="expanded")
+    st.set_page_config(page_title="BrandPerformanceCalc", page_icon=":crystal_ball:", initial_sidebar_state="expanded")
 
     st.title("Brand and Performance Calculator")
 
@@ -68,7 +66,7 @@ def main():
     create = final_df.iloc[1,1]
     convert = 100-create
 
-    result_area.write("<h1 style='text-align: center; font-size: {}px;'>Your final split is {}% Brand and {}% Performance</h1>".format(26, create, convert), unsafe_allow_html=True)
+    result_area.write("<b1 style='text-align: center; font-size: {}px;'>Your final split is <b>{}% Brand</b> and <b>{}% Performance</b></b1>".format(26, create, convert), unsafe_allow_html=True)
 
     st.write("This tool is designed to be a rough starting point for planning media. It is based off research from Les Binet and Peter Field. Please contact Marketing Science if you have any questions or would like more info on how we can help media planning.") 
 
