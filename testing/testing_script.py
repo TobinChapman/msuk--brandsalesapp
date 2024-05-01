@@ -1,11 +1,12 @@
 import streamlit as st
 
-# Create an empty space
-result_area = st.empty()
+# Add a selectbox to the sidebar
+option = st.sidebar.selectbox(
+    'Which number do you like best?',
+     ['1', '2', '3', '4'])
 
-# Calculate the result
-input_value = st.slider("Select a value", 0, 100, 50)
-result = input_value * 2
+'You selected:', option
 
-# Display the result in the empty space
-result_area.write("The result is {}".format(result))
+# Use a button to confirm the selection
+if st.sidebar.button('Confirm'):
+    st.sidebar.write('You confirmed the selection')

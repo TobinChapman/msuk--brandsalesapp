@@ -5,6 +5,7 @@ import pandas as pd
 def main():
     st.set_page_config(page_title="BrandPerformanceCalc", page_icon=":crystal_ball:", initial_sidebar_state="expanded")
 
+    st.image('MS_Logo.png', width=100)
     st.title("Brand and Performance Calculator")
 
     result_area = st.empty()
