@@ -1,8 +1,12 @@
 import streamlit as st
 import pandas as pd
+#from streamlit import html
 
 def main():
-    st.title("Create Convert Calc Field and Binet")
+    st.title("Brand and Performance Calculator")
+
+    result_area = st.empty()
+
     st.write("Input some details about your business:")
 
     category_val = st.selectbox('Category:', ('FMCG Non Food', 'FMCG Food and Drink', 'Retail', 'FMCG ALL', 'Durables All', 'Durable Non Automotive', 'Financial Service', 'Other services all', 'Other services Telco/ISP', 'Other services Travel/QSR/MEDIA'))
@@ -60,7 +64,9 @@ def main():
     create = final_df.iloc[1,1]
     convert = 100-create
 
-    st.write("Your final split is ", create,"% create and ",convert,"% convert") 
+    result_area.write("<h1 style='text-align: center; font-size: {}px;'>Your final split is {}% Brand and {}% Performance</h1>".format(26, create, convert), unsafe_allow_html=True)
+
+    st.write("This tool is designed to be a rough starting point for planning media. It is based off research from Les Binet and Peter Field. Please contact Marketing Science if you have any questions or would like more info on how we can help media planning.") 
 
 if __name__ == '__main__':
     main()
